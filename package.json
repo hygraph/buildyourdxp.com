@@ -8,23 +8,28 @@
     "dev": "gatsby develop"
   },
   "dependencies": {
+    "@sindresorhus/slugify": "^1.1.0",
+    "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "0.3.0",
+    "classnames": "^2.2.6",
     "gatsby": "2.23.12",
     "gatsby-image": "2.4.9",
     "gatsby-plugin-google-tagmanager": "2.3.7",
     "gatsby-plugin-postcss": "^2.3.6",
-    "gatsby-plugin-react-helmet": "3.3.6",
+    "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-sharp": "2.6.14",
-    "gatsby-source-filesystem": "2.3.14",
+    "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-graphcms": "1.0.0-next.1",
     "gatsby-source-graphql": "2.5.7",
     "gatsby-transformer-sharp": "2.5.7",
+    "markdown-to-jsx": "^6.11.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "6.1.0"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "dotenv": "8.2.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.5.2"
   }
 }

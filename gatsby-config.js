@@ -1,6 +1,14 @@
 require("dotenv").config();
 
 module.exports = {
+  siteMetadata: {
+    title: "Build Your DXP",
+    description: "",
+    keywords: "",
+    siteUrl: "https://buildyourdxp.com",
+    twitter: "https://twitter.com/graphcms",
+    linkedIn: "https://www.linkedin.com/company/graphcms/",
+  },
   plugins: [
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -21,12 +29,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: "gatsby-source-graphcms",
       options: {
-        typeName: "GraphCMS",
-        fieldName: "cms",
-        url: process.env.GRAPHCMS_ENDPOINT,
+        downloadLocalImages: true,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
       },
     },
+    "gatsby-plugin-react-helmet",
   ],
 };

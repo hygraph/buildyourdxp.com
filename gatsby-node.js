@@ -1,28 +1,24 @@
+const slugify = require("@sindresorhus/slugify");
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const {
     data: {
-      cms: { pages },
+      allGraphCmsPage: { nodes: pages },
     },
   } = await graphql(
     `
       fragment assetData on GraphCMS_Asset {
         id
         url
-        handle
-        width
-        height
       }
 
       {
-        cms {
-          pages {
+        allGraphCmsPage {
+          nodes {
             id
             slug
-            coverImage {
-              ...assetData
-            }
             seoTitle
             seoDescription
             seoFocusKeywords
@@ -52,4 +48,17 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    GraphCMS_Category: {
+      slug: {
+        type: "String",
+        resolve: ({ title }) => slugify(title, { lower: true }),
+      },
+    },
+  };
+
+  createResolvers(resolvers);
 };

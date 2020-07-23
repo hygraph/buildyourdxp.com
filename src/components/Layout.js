@@ -1,9 +1,11 @@
 import React from "react";
 
-function Layout({ children }) {
+import SEO from "./SEO";
+
+function Layout({ children, pageContext }) {
   return (
     <React.Fragment>
-      {/* <pre>{JSON.stringify(, null, 2)}</pre> */}
+      <SEO {...pageContext} />
       {children}
     </React.Fragment>
   );
