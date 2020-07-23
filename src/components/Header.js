@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 export default function Header(props) {
-  console.log(props);
   const { title, subTitle, ctaTo, ctaText, coverImage } = props;
 
   return (
