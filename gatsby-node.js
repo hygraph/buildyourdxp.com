@@ -1,4 +1,9 @@
+const fs = require("fs");
+const path = require("path");
 const slugify = require("@sindresorhus/slugify");
+
+const templatesDir = path.resolve(__dirname, "src", "templates");
+const pageTemplate = (fileName) => path.resolve(templatesDir, fileName);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -32,16 +37,18 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
-  pages.forEach((page) => {
+  pages.forEach(async (page) => {
     const { id, slug } = page;
+
+    const fileName = pageTemplate(`${slug}-template.js`);
+    const templateExists = await fs.existsSync(fileName);
+    const component = templateExists
+      ? fileName
+      : pageTemplate("page-template.js");
 
     createPage({
       path: slug === "home" ? `/` : `/${slug}`,
-      component: require.resolve(
-        slug === "home"
-          ? `./src/templates/HomeTemplate.js`
-          : `./src/templates/PageTemplate.js`
-      ),
+      component,
       context: {
         id,
         page,

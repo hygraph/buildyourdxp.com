@@ -7,8 +7,11 @@ export default function Category({ id, title, slug, tools = [] }) {
   return (
     <section key={id}>
       <div className="pt-12 pb-6 border-b border-gray-200 flex items-start md:items-center md:justify-between">
-        <h2 className="text-2xl leading-8 font-semibold tracking-tight font-display text-gray-900 sm:leading-9">
-          <a name={slug}>{title}</a>
+        <h2
+          className="text-2xl leading-8 font-semibold tracking-tight font-display text-gray-900 sm:leading-9"
+          id={slug}
+        >
+          {title}
         </h2>
 
         <Link
