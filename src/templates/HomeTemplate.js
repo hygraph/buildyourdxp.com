@@ -67,6 +67,7 @@ export const pageQuery = graphql`
           id
           name
           url
+          formattedUrl
           logo {
             width
             height

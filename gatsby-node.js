@@ -58,6 +58,14 @@ exports.createResolvers = ({ createResolvers }) => {
         resolve: ({ title }) => slugify(title, { lower: true }),
       },
     },
+
+    GraphCMS_Tool: {
+      formattedUrl: {
+        type: "String",
+        resolve: ({ url }) =>
+          url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0],
+      },
+    },
   };
 
   createResolvers(resolvers);

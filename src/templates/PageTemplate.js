@@ -11,8 +11,8 @@ function PageTemplate({ data: { graphCmsPage } }) {
     <React.Fragment>
       <Header {...graphCmsPage} />
 
-      <section className="py-6 md:py-12 bg-gray-50 ">
-        <div className="md:max-w-3xl mx-auto prose">
+      <section className="py-6 md:py-12 bg-gray-50">
+        <div className="md:max-w-3xl mx-auto prose px-4 sm:px-6 lg:px-8">
           <Markdown children={content} />
         </div>
       </section>

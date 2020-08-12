@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Tool({ id, name, url, logo }) {
+export default function Tool({ id, name, url, formattedUrl, logo }) {
   return (
     <li
       key={id}
       className="bg-white col-span-1 focus:outline-none transition-all duration-75 ease-in-out inline-flex rounded-lg shadow"
     >
       <a
-        href={url}
+        href={`${url}?referrer=build-your-dxp`}
         target="_blank"
         rel="noreferrer"
         className="group w-full flex h-full items-center justify-between p-6 space-x-6 rounded-lg focus:outline-none border border-transparent focus:border-primary focus:shadow-outline-pink"
@@ -20,7 +20,9 @@ export default function Tool({ id, name, url, logo }) {
               {name}
             </h3>
           </div>
-          <p className="mt-1 text-gray-500 text-sm leading-5 truncate">{url}</p>
+          <p className="mt-1 text-gray-500 text-sm leading-5 truncate">
+            {formattedUrl}
+          </p>
         </div>
       </a>
     </li>

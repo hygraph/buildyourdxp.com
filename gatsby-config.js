@@ -1,13 +1,18 @@
 require("dotenv").config();
 
+const siteMetadata = {
+  title: "Build Your DXP",
+  description: "",
+  keywords: "",
+  siteUrl: "https://buildyourdxp.com",
+  twitter: "https://twitter.com/graphcms",
+  linkedIn: "https://www.linkedin.com/company/graphcms/",
+};
+
 module.exports = {
   siteMetadata: {
-    title: "Build Your DXP",
-    description: "",
-    keywords: "",
-    siteUrl: "https://buildyourdxp.com",
-    twitter: "https://twitter.com/graphcms",
-    linkedIn: "https://www.linkedin.com/company/graphcms/",
+    ...siteMetadata,
+    ogImage: `${siteMetadata.siteUrl}/buildyourdxp.png`,
   },
   plugins: [
     "gatsby-plugin-sharp",
