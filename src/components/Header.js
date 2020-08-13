@@ -91,7 +91,7 @@ export default function Header(props) {
                   to="/contribute"
                   className="ml-8 font-medium text-black hover:text-primary transition duration-150 ease-in-out"
                 >
-                  Contribute to this website
+                  Contribute
                 </Link>
               </div>
             </nav>
