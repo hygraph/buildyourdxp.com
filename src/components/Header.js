@@ -77,7 +77,7 @@ export default function Header(props) {
                   to="/about"
                   className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  What is a DXP?
+                  About Build Your DXP
                 </Link>
 
                 <Link
