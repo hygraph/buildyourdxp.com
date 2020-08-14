@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="mt-8">
           <p className="text-center text-base leading-6 text-gray-400">
             &copy; 2020 &mdash; Maintained by{" "}
-            <a href="https://graphcms.com">GraphCMS</a>
+            <a href="https://graphcms.com?referrer=build-your-dxp">GraphCMS</a>
           </p>
         </div>
       </div>
