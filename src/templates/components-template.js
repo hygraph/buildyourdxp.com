@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Markdown from "markdown-to-jsx";
 
 import Header from "../components/Header";
@@ -36,34 +36,44 @@ export default function IndexPage({
               <div className="md:w-4/5 lg:max-w-3xl mx-auto px-6 prose">
                 <Markdown children={content} />
 
-                {categories.map(({ title, slug, description }) => (
-                  <div key={slug}>
-                    <h3 id={slug}>{title}</h3>
+                {categories.map(
+                  ({
+                    title,
+                    slug,
+                    description,
+                    referralText,
+                    referralLink,
+                  }) => (
+                    <div key={slug}>
+                      <h3 id={slug}>{title}</h3>
 
-                    <Markdown children={description} />
+                      <Markdown children={description} />
 
-                    <p>
-                      <Link
-                        to={`/#${slug}`}
-                        className="inline-flex items-center"
-                      >
-                        Explore more tools for {title}
-                        <span className="ml-1">
-                          <svg
-                            className="w-4 h-4"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            height="24"
+                      {referralText && referralLink && (
+                        <p>
+                          <a
+                            href={`/#${referralLink}`}
+                            className="inline-flex items-center"
                           >
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z" />
-                          </svg>
-                        </span>
-                      </Link>
-                    </p>
-                  </div>
-                ))}
+                            {referralText}
+                            <span className="ml-1">
+                              <svg
+                                className="w-4 h-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                              >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z" />
+                              </svg>
+                            </span>
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -98,6 +108,8 @@ export const pageQuery = graphql`
         title
         slug
         description
+        referralText
+        referralLink
       }
     }
   }

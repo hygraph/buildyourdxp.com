@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@sindresorhus/slugify": "^1.1.0",
+    "@slack/webhook": "5.0.3",
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "0.3.0",
     "classnames": "^2.2.6",
@@ -26,7 +27,8 @@
     "markdown-to-jsx": "^6.11.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "6.3.3"
   },
   "devDependencies": {
     "dotenv": "8.2.0",
