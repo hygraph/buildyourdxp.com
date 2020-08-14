@@ -52,7 +52,7 @@ export default function IndexPage({
                       {referralText && referralLink && (
                         <p>
                           <a
-                            href={`/#${referralLink}`}
+                            href={`{referralLink}`}
                             className="inline-flex items-center"
                           >
                             {referralText}
