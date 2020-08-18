@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./src/styles/main.css";
-
 import Layout from "./src/components/Layout";
 
 export const onRenderBody = ({ setHeadComponents }) => {
