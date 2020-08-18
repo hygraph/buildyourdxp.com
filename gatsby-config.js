@@ -2,7 +2,8 @@ require("dotenv").config();
 
 const siteMetadata = {
   title: "Build Your DXP",
-  description: "An open-source catalog to explore the best-of-breed microservices that power today's Digital Experience Platforms, enabling teams to deliver exceptional customer experiences at scale.",
+  description:
+    "An open-source catalog to explore the best-of-breed microservices that power today's Digital Experience Platforms, enabling teams to deliver exceptional customer experiences at scale.",
   keywords: "Digital Experience Platforms",
   siteUrl: "https://buildyourdxp.com",
   twitter: "https://twitter.com/graphcms",
@@ -19,6 +20,13 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        tailwind: true,
+        purgeOnly: ["src/styles/main.css"],
+      },
+    },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
