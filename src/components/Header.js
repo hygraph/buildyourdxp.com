@@ -89,7 +89,7 @@ export default function Header(props) {
 
                 <Link
                   to="/contribute"
-                  className="ml-8 font-medium text-black hover:text-primary transition duration-150 ease-in-out"
+                  className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Contribute
                 </Link>
