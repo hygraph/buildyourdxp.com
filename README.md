@@ -1,6 +1,6 @@
 ![About Build Your DXP](https://media.graphcms.com/yLmrUVseSzy8kIbRKkdC)
 
-Build Your DXP is an open-source catalog to explore the best-of-breed services that power today's Digital Experience Platforms. This project is maintained by [GraphCMS](https://graphcms.com)
+Build Your DXP is a community powered catalog to explore the best-of-breed services that power today's Digital Experience Platforms. This project is maintained by [GraphCMS](https://graphcms.com)
 
 ### What is a DXP?
 
