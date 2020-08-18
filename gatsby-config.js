@@ -21,13 +21,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {
-      resolve: "gatsby-plugin-purgecss",
-      options: {
-        tailwind: true,
-        purgeOnly: ["src/styles/main.css"],
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: process.env.GOOGLE_TAG_MANAGER_ID,
