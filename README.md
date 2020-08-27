@@ -1,4 +1,4 @@
-![About Build Your DXP](https://media.graphcms.com/yLmrUVseSzy8kIbRKkdC)
+![About Build Your DXP](https://media.graphcms.com/jBWbqEfSwqyiDouKGgfp)
 
 Build Your DXP is a community powered catalog to explore the best-of-breed services that power today's Digital Experience Platforms. This project is maintained by [GraphCMS](https://graphcms.com)
 
