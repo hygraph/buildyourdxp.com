@@ -53,7 +53,7 @@ export default function SEO({
       <meta property="og:site_name" content="Build Your DXP" />
       <meta property="og:image" content={pageOgImage} />
       <meta property="og:image:type" content="image/png" />
-      <meta name="og:type" content="website" />
+      <meta property="og:type" content="website" />
 
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
