@@ -5,8 +5,8 @@ const siteMetadata = {
   description: `An open-source catalog to explore the best-of-breed microservices that power today's Digital Experience Platforms, enabling teams to deliver exceptional customer experiences at scale.`,
   keywords: `Digital Experience Platforms`,
   siteUrl: `https://buildyourdxp.com`,
-  twitter: `https://twitter.com/graphcms`,
-  linkedIn: `https://www.linkedin.com/company/graphcms/`,
+  twitter: `https://twitter.com/hygraphcom`,
+  linkedIn: `https://www.linkedin.com/company/hygraph/`,
 };
 
 module.exports = {
