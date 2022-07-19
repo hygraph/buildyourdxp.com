@@ -1,6 +1,6 @@
-![About Build Your DXP](https://media.graphcms.com/jBWbqEfSwqyiDouKGgfp)
+![About Build Your DXP](https://media.graphassets.com/jBWbqEfSwqyiDouKGgfp)
 
-Build Your DXP is a community powered catalog to explore the best-of-breed services that power today's Digital Experience Platforms. This project is maintained by [GraphCMS](https://graphcms.com)
+Build Your DXP is a community powered catalog to explore the best-of-breed services that power today's Digital Experience Platforms. This project is maintained by [Hygraph](https://hygraph.com)
 
 ### What is a DXP?
 
@@ -8,7 +8,7 @@ A DXP, or a Digital Experience Platform, is an emerging category of software aim
 
 [This website](https://buildyourdxp.com) aims to catalog these "best of breed" micro-services that typically come together to form a DXP.
 
-Learn more about the details on a DXP in the context of microservices and Headless CMS on the [GraphCMS Academy](https://graphcms.com/academy/dxp-and-headless-cms?referrer=build-your-dxp).
+Learn more about the details on a DXP in the context of microservices and Headless CMS on the [Hygraph Academy](https://hygraph.com/academy/dxp-and-headless-cms?referrer=build-your-dxp).
 
 ### What is BuildYourDXP.com?
 
