@@ -1,9 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Markdown from "markdown-to-jsx";
+import Markdown from "react-markdown";
 
+import Seo from "../components/SEO";
 import Header from "../components/Header";
 import TableOfContents from "../components/TOC";
+
+export const Head = () => <Seo />;
 
 export default function IndexPage({
   data: {
@@ -34,7 +37,7 @@ export default function IndexPage({
               </div>
 
               <div className="md:w-4/5 lg:max-w-3xl mx-auto px-6 prose">
-                <Markdown children={content} />
+                {content && <Markdown>{content}</Markdown>}
 
                 {categories.map(
                   ({
@@ -92,13 +95,7 @@ export const pageQuery = graphql`
       ctaText
       ctaTo
       coverImage {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 1120) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
 

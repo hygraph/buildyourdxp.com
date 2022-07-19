@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 
 export default function SEO({
   seoTitle: title,
@@ -37,7 +36,7 @@ export default function SEO({
   const pageOgImage = (ogImage && ogImage.url) || defaultOgImage;
 
   return (
-    <Helmet htmlAttributes={{ lang: "en" }} defaultTitle={defaultTitle}>
+    <>
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <meta name="keywords" content={pageKeywords} />
@@ -60,6 +59,6 @@ export default function SEO({
       <meta name="twitter:image" content={pageOgImage} />
 
       {children}
-    </Helmet>
+    </>
   );
 }
