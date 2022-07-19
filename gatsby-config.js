@@ -51,5 +51,6 @@ module.exports = {
         display: `standalone`,
       },
     },
+    `gatsby-plugin-preact`,
   ],
 };
