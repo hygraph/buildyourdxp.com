@@ -1,12 +1,10 @@
 import React from "react";
 
-import SEO from "./SEO";
 import Footer from "./Footer";
 
-function Layout({ children, pageContext: { page } }) {
+function Layout({ children }) {
   return (
     <React.Fragment>
-      <SEO {...page} />
       {children}
       <Footer />
     </React.Fragment>

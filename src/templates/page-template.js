@@ -1,8 +1,11 @@
 import React from "react";
-import Markdown from "markdown-to-jsx";
-
-import Header from "../components/Header";
 import { graphql } from "gatsby";
+import Markdown from "react-markdown";
+
+import Seo from "../components/SEO";
+import Header from "../components/Header";
+
+export const Head = () => <Seo />;
 
 function PageTemplate({ data: { graphCmsPage } }) {
   const { content } = graphCmsPage;
@@ -13,7 +16,7 @@ function PageTemplate({ data: { graphCmsPage } }) {
 
       <section className="py-6 md:py-12 bg-gray-50">
         <div className="md:max-w-3xl mx-auto prose px-4 sm:px-6 lg:px-8">
-          <Markdown children={content} />
+          {content && <Markdown>{content}</Markdown>}
         </div>
       </section>
     </React.Fragment>
@@ -29,13 +32,7 @@ export const pageQuery = graphql`
       ctaText
       ctaTo
       coverImage {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 1120) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

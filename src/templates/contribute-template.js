@@ -1,8 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
 
+import Seo from "../components/SEO";
 import Header from "../components/Header";
 import ContributeForm from "../components/ContributeForm";
+
+export const Head = () => <Seo />;
 
 function ContributeTemplate({ data: { graphCmsPage } }) {
   return (
@@ -26,13 +29,7 @@ export const pageQuery = graphql`
       ctaText
       ctaTo
       coverImage {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 1120) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

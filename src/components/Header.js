@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function Header(props) {
   const { title, subTitle, ctaTo, ctaText, coverImage } = props;
+  const image = getImage(coverImage);
 
   return (
     <div className="relative bg-white overflow-hidden">
@@ -121,9 +122,9 @@ export default function Header(props) {
           </main>
         </div>
       </div>
-      {coverImage && (
+      {image && (
         <div className="hidden xl:block xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2">
-          <Img fluid={coverImage.localFile.childImageSharp.fluid} />
+          <GatsbyImage image={image} alt={title} />
         </div>
       )}
     </div>

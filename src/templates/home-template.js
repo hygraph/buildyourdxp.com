@@ -1,9 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 
+import Seo from "../components/SEO";
 import Header from "../components/Header";
 import TableOfContents from "../components/TOC";
 import Category from "../components/Category";
+
+export const Head = () => <Seo />;
 
 export default function IndexPage({
   data: {
@@ -48,13 +51,7 @@ export const pageQuery = graphql`
       ctaText
       ctaTo
       coverImage {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 1120) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
 
